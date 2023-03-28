@@ -1,14 +1,12 @@
 package com.quiz.quiz.entity;
 
-import java.io.Serializable;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "categorias")
-public class Categoria implements Serializable {
+public class Categoria {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

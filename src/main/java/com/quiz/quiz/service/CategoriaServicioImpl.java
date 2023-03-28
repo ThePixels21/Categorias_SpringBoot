@@ -3,10 +3,12 @@ package com.quiz.quiz.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.quiz.quiz.entity.Categoria;
 import com.quiz.quiz.repositorie.CategoriaRepositorio;
 
+@Service
 public class CategoriaServicioImpl implements CategoriaServicio {
 
     @Autowired

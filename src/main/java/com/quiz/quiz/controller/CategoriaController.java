@@ -1,6 +1,7 @@
 package com.quiz.quiz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import com.quiz.quiz.service.CategoriaServicio;
 
 import jakarta.validation.Valid;
 
+@Controller
 public class CategoriaController {
     
     @Autowired
@@ -36,7 +38,7 @@ public class CategoriaController {
             return "crear_categoria";
         }
         servicio.guardarCategoria(categoria);
-        return "redirect:/index";
+        return "redirect:/categorias";
     }
 
     @GetMapping("/categorias/editar/{codigo}")

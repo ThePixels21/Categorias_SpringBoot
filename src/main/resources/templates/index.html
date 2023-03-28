@@ -38,6 +38,7 @@
                 <tr>
                     <th>Nombre de Producto</th>
                     <th>Descripción</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +47,7 @@
                     <td th:text="${categoria.descripcion}">Descripcion</td>
                     <td>
                         <a th:href="@{/categorias/editar/{codigo}(codigo=${categoria.codigo})}" class="btn btn-info">Editar</a>
-                        <a th:if="${categoria.empleados.isEmpty()}" th:href="@{/categorias/eliminar/{codigo}(codigo=${categoria.codigo})}" class="btn btn-danger">Eliminar</a>
+                        <a th:href="@{/categorias/eliminar/{codigo}(codigo=${categoria.codigo})}" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             </tbody>
